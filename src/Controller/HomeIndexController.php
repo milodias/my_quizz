@@ -14,7 +14,6 @@ class HomeIndexController extends AbstractController {
      */
     function index(): Response {
         $categories = $this->getDoctrine()->getRepository(Categorie::class)->findAll();
-        dump($categories);
         return $this->render('pages/home.html.twig', ['categories' => $categories]);
     }
 }
