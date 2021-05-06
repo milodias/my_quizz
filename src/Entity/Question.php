@@ -27,6 +27,11 @@ class Question
      */
     private $id_category;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $id_quizz;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Question
     public function setIdCategory(int $id_category): self
     {
         $this->id_category = $id_category;
+
+        return $this;
+    }
+
+    public function getIdQuizz(): ?int
+    {
+        return $this->id_quizz;
+    }
+
+    public function setIdQuizz(int $id_quizz): self
+    {
+        $this->id_quizz = $id_quizz;
 
         return $this;
     }
